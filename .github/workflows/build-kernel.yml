@@ -26,7 +26,7 @@ jobs:
         run: |
           # .config
           make deepin_x86_desktop_defconfig
-          make -j$(nproc)
+          make bindeb-pkg -j$(nproc)
 
   build-arm64-kernel:
     runs-on: [self-hosted, linux, ARM64]
@@ -41,4 +41,4 @@ jobs:
         run: |
           # .config
           make deepin_arm64_desktop_defconfig
-          make -j$(nproc)
+          make bindeb-pkg -j$(nproc)

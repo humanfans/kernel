@@ -25,6 +25,8 @@ jobs:
       - name: "Compile kernel"
         run: |
           # .config
+          make clean
+          make mrproper
           make deepin_x86_desktop_defconfig
           make bindeb-pkg -j$(nproc)
 
@@ -39,6 +41,8 @@ jobs:
 
       - name: "Compile kernel"
         run: |
+          make clean
+          make mrproper
           # .config
           make deepin_arm64_desktop_defconfig
           make bindeb-pkg -j$(nproc)

@@ -24,6 +24,7 @@ jobs:
 
       - name: "Compile kernel"
         run: |
+          rm ../*.deb ../*.buildinfo ../*.changes 
           # .config
           make clean
           make mrproper
@@ -41,6 +42,7 @@ jobs:
 
       - name: "Compile kernel"
         run: |
+          rm ../*.deb ../*.buildinfo ../*.changes 
           make clean
           make mrproper
           # .config
